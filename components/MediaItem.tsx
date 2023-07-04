@@ -3,6 +3,7 @@
 import useLoadImage from "@/hooks/useLoadImage";
 import { Song } from "@/types";
 import Image from "next/image";
+import LikeButton from "./LikeButton";
 
 interface MediaItemProps {
   data: Song;
@@ -57,6 +58,7 @@ const MediaItem: React.FC<MediaItemProps> = ({ data, onClick }) => {
         <p className=" text-white truncate">{data.title}</p>
         <p className=" text-neutral-400 text-sm truncate">{data.author}</p>
       </div>
+      <LikeButton songId={data.id} />
     </div>
   );
 };
