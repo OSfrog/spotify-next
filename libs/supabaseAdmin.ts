@@ -6,8 +6,6 @@ import { Price, Product } from "@/types";
 
 import { stripe } from "./stripe";
 import { toDateTime } from "./helpers";
-import { metadata } from "@/app/layout";
-import { log } from "util";
 
 export const supabaseAdmin = createClient<Database>(
   process.env.NEXT_PUBLIC_SUPABASE_URL || "",

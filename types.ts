@@ -53,6 +53,10 @@ export interface Product {
   metadata?: Stripe.Metadata;
 }
 
+export interface ProductWithPrice extends Product {
+  prices?: Price[];
+}
+
 export interface Song {
   id: string;
   user_id: string;
